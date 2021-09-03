@@ -1,0 +1,105 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --main-color: #06d6a0;
+    --accent-color: #05386b;
+}
+
+
+.mainPage
+{
+    background: url("./images/whatever\ you\ do\,\ do\ it\ well.\ \(1\).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationBar
+{
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    height: 150px;
+    top: 0;
+    justify-content: flex-end;
+}
+
+.navigationBar a
+{
+    padding: 15px 20px;
+    text-decoration: none;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--accent-color);
+}
+
+h1
+{
+    color: white;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 80px;
+    font-weight: lighter;
+}
+
+h2
+{
+    color: var(--accent-color);
+    font-family: 'Bad Script', cursive;
+}
+
+#lightButton
+{
+    color: var(--accent-color);
+    background: rgba(0,0,0,0);
+    border: 2px solid var(--accent-color);
+}
+
+#darkButton
+{
+    color: white;
+    background: var(--accent-color);
+    border: none;
+}
+
+button
+{
+    padding: 10px 20px;
+    margin: 30px 5px;
+    font-size: 15px;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: bold;
+}
+
+.iconRow
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.iconRow > *
+{
+    font-size: 50px;
+    color: var(--accent-color);
+    margin: 5px 0;
+}
