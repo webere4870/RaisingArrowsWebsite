@@ -26,6 +26,16 @@
     align-items: center;
 }
 
+.mainPage h1, .mainPage h2, .mainPage .buttonClass
+{
+    animation-name: mainPageFade;
+    opacity: 0.0;
+    animation-fill-mode: forwards;
+    transform: translateY(30%);
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+}
+
 .navigationBar
 {
     display: flex;
@@ -44,6 +54,25 @@
     font-size: 20px;
     font-weight: bolder;
     color: var(--accent-color);
+    z-index: 20;
+}
+
+.fa-facebook-square:hover
+{
+    color: rgb(26, 92, 235);
+    cursor: pointer;
+}
+
+.fa-youtube-square:hover
+{
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+}
+
+.fa-instagram:hover
+{
+    cursor: pointer;
+    color: rgb(250, 19, 238);
 }
 
 .hamburger
@@ -65,13 +94,13 @@
 
 .hamburgerNavigation
 {
-    background: var(--main-color);
+    background: var(--accent-color);
     width: 100vw;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -80,12 +109,49 @@
 
 .hamburgerNavigation a
 {
-    color: var(--accent-color);
+    color: var(--main-color);
     font-family: 'Advent Pro', sans-serif;
     text-decoration: none;
     font-size: 30px;
     padding: 10px 0;
 }
+
+
+.hamburgerNavigation h1
+{
+    font-size: 30px;
+}
+
+.hamburgerNavigation img
+{
+    width: 250px;
+}
+.hamburgerNavigation img:nth-of-type(1)
+{
+    transform: translateX(-200%);
+    animation-fill-mode: forwards;
+    animation-name: leftArrow;
+    transition-timing-function: ease-in;
+    animation-duration: 1s;
+}
+.hamburgerNavigation img:nth-of-type(2)
+{
+    transform: rotateY(180deg);
+    transform: translateX(200%);
+    animation-name: rightArrow;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+.hamburgerNavigation a:hover
+{
+    text-transform: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: var(--main-color);
+    cursor: pointer;
+}
+
 
 .xButton
 {
@@ -103,6 +169,15 @@
 
 .hamburger:hover
 {
+    cursor: pointer;
+}
+
+.navigationBar a:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: var(--accent-color);
     cursor: pointer;
 }
 
@@ -143,6 +218,12 @@ button
     font-weight: bold;
 }
 
+button:hover
+{
+    cursor: pointer;
+    z-index: 500;
+}
+
 .iconRow
 {
     position: absolute;
@@ -162,6 +243,45 @@ button
     font-size: 50px;
     color: var(--accent-color);
     margin: 5px 0;
+}
+
+
+@keyframes leftArrow
+{
+    0%
+    {
+        transform: translateX(-200%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes rightArrow
+{
+    0%
+    {
+        transform: translateX(-200%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes mainPageFade
+{
+    0%
+    {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translate(0%);
+        opacity: 1.0;
+    }
 }
 
 @media screen and (max-width: 786px)
