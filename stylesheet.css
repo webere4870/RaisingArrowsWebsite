@@ -11,6 +11,11 @@
     --accent-color: #05386b;
 }
 
+html
+{
+    overflow: hidden;
+}
+
 
 .mainPage
 {
@@ -244,6 +249,27 @@ button:hover
     color: var(--accent-color);
     margin: 5px 0;
 }
+
+.quote
+{
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    color: var(--accent-color);
+}
+/* 
+.quote::before
+{
+    content: url("./images/smallQuote1.png");
+}
+
+.quote::after
+{
+    content: url("./images/smallQuote2.png")
+} */
 
 
 @keyframes leftArrow
