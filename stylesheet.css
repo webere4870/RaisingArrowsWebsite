@@ -91,11 +91,111 @@ iframe
     background: var(--main-color);
 }
 
+.calendarPage
+{
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--main-color);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.calendarInnerPage
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.leftPage
+{
+    height: 100vh;
+    width: 40vw;
+    background: var(--accent-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: slideRight;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    transform: translateX(-500%);
+}
+
+.rightPage
+{
+    position: relative;
+    height: 100%;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftPage ul li
+{
+    color: white;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+}
+
+.rightPage iframe
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -30vh;
+    left: 12vw;
+    height: 400px;
+    width: 500px;
+    z-index: 100;
+}
+
+.diamond3
+{
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    background: var(--accent-color);
+    right: -52px;
+    top: calc(50vh - 75px);
+    transform: skew(30deg, 0);
+}
+
+.leftPage h1
+{
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.diamond4
+{
+    height: 75px;
+    width: 75px;
+    background: var(--accent-color);
+    position: absolute;
+    right: -52px;
+    bottom: calc(50vh - 75px);
+    transform: skew(-30deg, 0);
+}
+
 .topSplit
 {
     width: 100vw;
     height: 65vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottomSplit
@@ -492,7 +592,17 @@ button:hover
 {
     content: url("./images/smallQuote2.png")
 } */
-
+@keyframes slideRight 
+{
+    0%
+    {
+        transform: translateX(-1000%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
+}
 
 @keyframes leftArrow
 {
