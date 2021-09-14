@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Bad+Script&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+<style>
+    .navigationBar a
+    {
+        color: white;
+    }
+    .navigationBar a:hover
+    {
+        text-decoration: underline;
+                text-decoration-color: #06d6a0; text-underline-offset: 5px;
+    }
+</style>
+<script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="backgroundControl">
+
+    </div>
+    <div class="animationPage">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+    </div>
+
+    <div class="contactPage">
+
+        <div class="leftScreen">
+
+        </div>
+        <div class="rightScreen">
+            <form action="">
+                <input type="text" placeholder="Name: ">
+                <input type="text" placeholder="Email: ">
+                <input type="text" placeholder="Phone: ">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message:"></textarea>
+            </form>
+        </div>
+
+            <div class="hamburgerNavigation">
+                <div class="xButton" onclick="closePage('hamburgerNavigation')">
+                    <i class="fas fa-times"></i>
+                </div>
+                <img src="./images/logoGreen.png" alt="">
+                <a href="index.html">Home</a>
+                <a href="mission.html">Mission</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="#">Contact</a>
+                <img src="./images/logoGreen.png" alt="">
+            </div>
+            <div class="hamburger" onclick="openPage('hamburgerNavigation')">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navigationBar">
+                <a href="index.html">Home</a>
+                <a href="mission.html">Mission</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="#" style="text-decoration: underline;
+                text-decoration-color: #06d6a0; text-underline-offset: 5px;">Contact</a>
+            </div>
+
+    </div>
+
+        
+    
+    
+    <script src="control.js">
+
+    </script>
+</body>
+</html>
