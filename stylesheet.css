@@ -310,6 +310,67 @@ ul li
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.contentContainer
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    position: relative;
+    animation-name: missionDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    transform: translateY(300%);
+    z-index: -20;
+}
+
+.content::before
+{
+    content: url('/images/blueUpright1.png');
+    height: 25px;
+    position: absolute;
+    left: -60px;
+    top: 20px;
+}
+
+.content::after
+{
+    content: url('/images/blueUpright1.png');
+    height: 25px;
+    position: absolute;
+    right: -60px;
+    top: 20px;
+}
+#content2, #content3, #content4
+{
+    display: none;
+}
+
+.topSplit *
+{
+    font-family: 'Advent Pro', sans-serif;
+    color: white;
+}
+
+.topSplit p
+{
+    font-size: 25px;
 }
 
 .bottomSplit
@@ -320,6 +381,7 @@ ul li
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 0;
 }
 
 .wholeBubble
@@ -378,6 +440,11 @@ ul li
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.iconBubble:hover
+{
+    cursor: pointer;
 }
 
 .bottomSplit h2
@@ -870,6 +937,19 @@ button:hover
     animation-delay: 0.8s;
   }
   
+  @keyframes missionDown
+  {
+      0%
+      {
+        transform: translateY(300%);
+      }
+      100%
+      {
+        transform: translateX(0%);
+        z-index: 100;
+      }
+  }
+
   @keyframes loader {
     0% {
       transform: scaleY(0.1);
