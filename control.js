@@ -28,3 +28,31 @@ function updateSlide(slideNumber)
     let mySlide = document.querySelector(slideNumber);
     mySlide.style.display = 'flex';
 }
+
+function openClose(idOpen, classClose)
+{
+    let myId = document.querySelector(idOpen);
+    let closeClass = document.getElementsByClassName('controlDisplay');
+    let counterSelect =0;
+    for(let counter = 0; counter < closeClass.length; counter++)
+    {
+        closeClass[counter].style.display = "none";
+    }
+    let yesOrNo = document.querySelectorAll('.controlDisplay');
+    let circle = document.querySelectorAll('.circleSS');
+    for(let counter = 0; counter < closeClass.length; counter++)
+    {
+        let stringer = yesOrNo[counter].style.display;
+        if(stringer === 'flex')
+        {
+            circle[counter].style.background = '#05386b';
+        }
+        else
+        {
+            circle[counter].style.background = '#06d6a0';
+        }
+    }
+
+    myId.style.display = "flex";
+
+}
