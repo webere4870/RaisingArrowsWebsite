@@ -29,21 +29,26 @@ function updateSlide(slideNumber)
     mySlide.style.display = 'flex';
 }
 
-function openClose(idOpen, classClose)
+function openClose(idOpen, classClose, animationNumber)
 {
     let myId = document.querySelector(idOpen);
     let closeClass = document.getElementsByClassName('controlDisplay');
+    let animation = document.querySelectorAll('.innerPage');
+    for(let counter = 0; counter < animation.length; counter++)
+    {
+        animation[counter].style.animationName = `${animationNumber}`;
+    }
     let counterSelect =0;
     for(let counter = 0; counter < closeClass.length; counter++)
     {
         closeClass[counter].style.display = "none";
     }
+    myId.style.display = "flex";
     let yesOrNo = document.querySelectorAll('.controlDisplay');
     let circle = document.querySelectorAll('.circleSS');
     for(let counter = 0; counter < closeClass.length; counter++)
     {
-        let stringer = yesOrNo[counter].style.display;
-        if(stringer === 'flex')
+        if(yesOrNo[counter].style.display !== 'none')
         {
             circle[counter].style.background = '#05386b';
         }
@@ -53,6 +58,6 @@ function openClose(idOpen, classClose)
         }
     }
 
-    myId.style.display = "flex";
+    
 
 }

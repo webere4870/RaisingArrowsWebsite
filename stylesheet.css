@@ -507,6 +507,10 @@ ul li
     justify-content: center;
     align-items: center;
     position: relative;
+    animation-timing-function: ease;
+    animation-duration: 0s;
+    animation-fill-mode: forwards;
+
 }
 
 .positionAbsolute
@@ -538,7 +542,19 @@ ul li
     flex-wrap: nowrap;
 }
 
-#control2, #control3, #control4
+.controlDisplay:nth-of-type(1)
+{
+    display: flex;
+}
+.controlDisplay:nth-of-type(2)
+{
+    display: none;
+}
+.controlDisplay:nth-of-type(3)
+{
+    display: none;
+}
+.controlDisplay:nth-of-type(4)
 {
     display: none;
 }
@@ -562,15 +578,6 @@ ul li
     padding: 0 40px;
 }
 
-.leftArrow
-{
-    color: var(--main-color);
-}
-
-.rightArrow
-{
-    color: var(--accent-color);
-}
 
 .circleSS
 {
@@ -951,6 +958,54 @@ button:hover
     100%
     {
         transform: translateX(0%);
+    }
+}
+
+@keyframes diagonal1
+{
+    0%
+    {
+        
+    }
+    100%
+    {
+        clip-path: polygon(100% 100%, 0% 100%, 0% 0%);
+    }
+}
+
+@keyframes diagonal2
+{
+    0%
+    {
+        
+    }
+    100%
+    {
+       clip-path:  polygon(50% 0%, 50% 100%, 0% 100%, 0% 0%);
+    }
+}
+
+@keyframes diagonal3
+{
+    0%
+    {
+        
+    }
+    100%
+    {
+       clip-path:  polygon(100% 0%, 0% 100%, 0% 0%);
+    }
+}
+
+@keyframes diagonal4
+{
+    0%
+    {
+        
+    }
+    100%
+    {
+       clip-path:  polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
     }
 }
 
