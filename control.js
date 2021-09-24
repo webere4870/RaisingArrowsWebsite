@@ -50,14 +50,23 @@ function openClose(idOpen, classClose, animationNumber)
     {
         if(yesOrNo[counter].style.display !== 'none')
         {
-            circle[counter].style.background = '#05386b';
+            circle[counter].style.background = 'white';
         }
         else
         {
-            circle[counter].style.background = '#06d6a0';
+            circle[counter].style.background = 'rgba(0,0,0,0)';
         }
     }
 
     
 
+}
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -41.03570179880634, lng: 83.64643271631078 },
+    zoom: 8,
+  });
 }

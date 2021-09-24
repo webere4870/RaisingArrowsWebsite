@@ -100,9 +100,9 @@ iframe
 
 }
 
-.leftScreen h1
+.leftScreen h1, .rightScreen h1
 {
-    font-size: 35px;
+    font-size: 24px;
 }
 
 .contactPage
@@ -138,6 +138,20 @@ h2
     color: var(--accent-color);
     font-family: 'Bad Script', cursive;
     text-align: center;
+}
+
+#map {
+    height: 300px;
+    width: 300px;
+  }
+
+.rightScreen
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 form{
@@ -202,6 +216,7 @@ textarea
     background: #03213f;
     border: 1px solid gray;
     padding: 2px 5px;
+    width: 300px;
     z-index: 100;
 }
 
@@ -240,6 +255,7 @@ textarea
     align-items: center;
     animation-name: slideRight;
     animation-duration: 2s;
+    animation-delay: .25s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     transform: translateX(-500%);
@@ -584,7 +600,7 @@ ul li
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background: var(--main-color);
+    background: rgba(0,0,0,0);
     border: 2px solid white;
     margin: 0 2px;
 }

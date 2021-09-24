@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +43,7 @@
     <div class="contactPage">
 
         <div class="leftScreen">
+            <div id="map"></div>
             <h1>Contact us or send us a message!</h1>
             <ul>
                 <li>Phone: <a href="tel:419-348-1978">419-348-1978</a></li>
@@ -55,6 +57,7 @@
             </ul>
         </div>
         <div class="rightScreen">
+            <h1>Contact us or send us a message!</h1>
             <form action="">
                 <input type="text" placeholder="Name: ">
                 <input type="text" placeholder="Email: ">
@@ -91,6 +94,14 @@
 
         
     
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzaKppWvSgYAsc-G9Jy9MkwZl4Sk24nM8&callback=initMap&v=weekly"
+      async
+    >
+
+</script>
     
     <script src="control.js">
 
