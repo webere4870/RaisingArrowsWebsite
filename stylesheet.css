@@ -703,7 +703,7 @@ ul li
     background: var(--accent-color);
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
@@ -711,6 +711,7 @@ ul li
     align-items: center;
     flex-direction: column;
     z-index: 200;
+    overflow: hidden;
 }
 
 .hamburgerNavigation a
@@ -1027,18 +1028,7 @@ button:hover
 
 @media screen and (max-width: 786px)
 {
-    .navigationBar
-    {
-        display: none;
-    }
-    .hamburger
-    {
-        display: flex;
-    }
-    .iconRow
-    {
-        display: none;
-    }
+    
 }
 
 .bar {
@@ -1107,4 +1097,104 @@ button:hover
       background: transparent;
     }
   }
+
+
+  @media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    .navigationBar
+    {
+        display: none;
+    }
+    .hamburger
+    {
+        display: flex;
+    }
+    .iconRow
+    {
+        position: inherit;
+        flex-direction: row;
+        height: 50px;
+        
+    }
+    .iconRow > i
+    {
+        padding: 0 5px;
+    }
+    h1
+    {
+        font-size: 60px;
+    }
+    h2
+    {
+        padding-top: 15px;
+        font-size: 20px;
+    }
+    .topSplit h1
+    {
+        font-size: 60px;
+    }
+    .topSplit p
+    {
+        font-size: 20px;
+    }
+    }
+    
+    @media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    .topSplit h1
+    {
+        font-size: 40px;
+    }
+    .topSplit p
+    {
+        
+    }
+    .iconBubble
+    {
+        height: 50px;
+        width: 50px;
+        border: 3px solid white;
+    }
+    .iconBubble i
+    {
+        font-size: 20px;
+    }
+
+    .wholeBubble h2
+    {
+        font-size: 15px;
+    }
+    }
+    
+    @media screen and (max-width: 479px) {
+    /* start of phone styles */
+    .iconRow > i
+    {
+        font-size: 35px;
+    }
+    h1
+    {
+        font-size: 60px;
+    }
+    h2
+    {
+        padding-top: 15px;
+        font-size: 20px;
+    }
+    .iconBubble
+    {
+        height: 50px;
+        width: 50px;
+        border: 3px solid white;
+    }
+    .iconBubble i
+    {
+        font-size: 20px;
+    }
+
+    .wholeBubble h2
+    {
+        display: none;
+    }
+    }
   

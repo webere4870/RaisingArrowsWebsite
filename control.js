@@ -4,12 +4,22 @@ function openPage(opener)
 {
     let myPage = document.getElementsByClassName(opener);
     myPage[0].style.display = "flex";
+    let stopScroll = document.querySelectorAll('body');
+    for(let counter = 0; counter < stopScroll.length; counter++)
+    {
+        stopScroll[counter].style.position = 'fixed';
+    }
 }
 
 function closePage(closer)
 {
     let myPage = document.getElementsByClassName(closer);
     myPage[0].style.display = "none";
+    let stopScroll = document.querySelectorAll('body');
+    for(let counter = 0; counter < stopScroll.length; counter++)
+    {
+        stopScroll[counter].style.position = 'inherit';
+    }
 }
 
 function quitAnimation()
