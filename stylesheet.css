@@ -374,7 +374,7 @@ ul li
 
 .content::after
 {
-    content: url('./images/blueUpright1.PNG');
+    content: url('./images/blueUpright1.png');
     height: 25px;
     position: absolute;
     right: -60px;
