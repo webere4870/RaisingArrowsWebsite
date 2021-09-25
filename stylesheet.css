@@ -1164,6 +1164,7 @@ button:hover
     {
         font-size: 15px;
     }
+    
     }
     
     @media screen and (max-width: 479px) {
@@ -1195,6 +1196,13 @@ button:hover
     .wholeBubble h2
     {
         display: none;
+    }
+    .mainPage
+    {
+        background: url('./images/mobileFriendly.png');
+        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     }
     }
   
