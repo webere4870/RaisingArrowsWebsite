@@ -1141,6 +1141,10 @@ button:hover
     
     @media screen and (max-width: 767px) {
     /* start of medium tablet styles */
+    .leftScreen
+    {
+        display: none;
+    }
     .topSplit h1
     {
         font-size: 40px;
@@ -1185,9 +1189,10 @@ button:hover
     
     @media screen and (max-width: 479px) {
     /* start of phone styles */
+
     .iconRow > i
     {
-        font-size: 35px;
+        font-size: 45px;
     }
     h1
     {
@@ -1209,6 +1214,7 @@ button:hover
         font-size: 20px;
         
     }
+
 
     .wholeBubble h2
     {
