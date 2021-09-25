@@ -1149,6 +1149,10 @@ button:hover
     {
         
     }
+    .iconRow i
+    {
+        color: white;
+    }
     .iconBubble
     {
         height: 50px;
@@ -1163,6 +1167,18 @@ button:hover
     .wholeBubble h2
     {
         font-size: 15px;
+
+    }
+    
+
+    .secondPage h2
+    {
+        font-size: 20px;
+    }
+
+    .leftArrow, .rightArrow
+    {
+        font-size: 20px;
     }
     
     }
@@ -1180,7 +1196,7 @@ button:hover
     h2
     {
         padding-top: 15px;
-        font-size: 20px;
+        font-size: 15px;
     }
     .iconBubble
     {
@@ -1191,6 +1207,7 @@ button:hover
     .iconBubble i
     {
         font-size: 20px;
+        
     }
 
     .wholeBubble h2
@@ -1204,5 +1221,6 @@ button:hover
     background-repeat: no-repeat;
     background-size: cover;
     }
+    
     }
   
