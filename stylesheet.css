@@ -138,6 +138,7 @@ h2
     color: var(--accent-color);
     font-family: 'Bad Script', cursive;
     text-align: center;
+    font-size: 20px;
 }
 
 #map {
@@ -227,12 +228,11 @@ textarea
     min-height: 100vh;
     width: 100vw;
     background: var(--main-color);
-    justify-content: center;
     display: flex;
     align-items: center;
 }
 
-.calendarInnerPage
+/* .calendarInnerPage
 {
     height: 100%;
     width: 100%;
@@ -241,7 +241,7 @@ textarea
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-}
+} */
 
 .leftPage
 {
@@ -259,17 +259,30 @@ textarea
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     transform: translateX(-500%);
+
 }
 
-.rightPage
+/* .rightPage
 {
-    position: relative;
+    
     height: 100%;
-    width: 60vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+} */
+
+.oneHundred
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
 }
 
 ul li
@@ -286,15 +299,12 @@ ul li
 
 .rightPage iframe
 {
+    height: 400px;
+    width: 500px;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: -30vh;
-    left: 12vw;
-    height: 400px;
-    width: 500px;
-    z-index: 100;
 }
 
 .diamond3
@@ -643,7 +653,7 @@ ul li
 .navigationBar
 {
     display: flex;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     height: 150px;
     top: 0;
@@ -1183,6 +1193,23 @@ button:hover
     .leftArrow, .rightArrow
     {
         font-size: 20px;
+    }
+
+    .leftPage
+    {
+       display: none;
+    }
+    .rightPage
+    {
+        width: 100vw;
+    }
+    .rightPage iframe
+    {
+        height: 300px;
+        width: 400px;
+        position: absolute;
+        top: -30vh;
+        left: 12vw;
     }
     
     }
