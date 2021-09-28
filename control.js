@@ -1,5 +1,12 @@
 window.addEventListener("load", quitAnimation);
 
+
+function swiperRight()
+{
+    let leftPage = document.querySelector('leftPage');
+    leftPage.style.animationName = 'transformRight';
+}
+
 function openPage(opener)
 {
     let myPage = document.getElementsByClassName(opener);
