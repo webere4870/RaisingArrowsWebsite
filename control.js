@@ -7,10 +7,9 @@ function swiperRight()
     slideUp.style.transform = 'translateX(250%)';
     slideUp.style.animationName = 'slideUp';
     let buttonClose = document.getElementById('dateButton');
-    setTimeout(1000, ()=>
-    {
+
         buttonClose.style.display = 'none';
-    })
+
 }
 
 function swiperDown()

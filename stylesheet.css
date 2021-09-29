@@ -316,6 +316,18 @@ textarea
     background: var(--accent-color);
 } 
 
+#hiddenArrow2
+{
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+    top: 0;
+    display: none;
+    transform: rotate(180deg);
+    background: var(--accent-color);
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 100% 100%, 0% 100%);
+}
+
 .hiddenArrow:hover
 {
     cursor: pointer;
@@ -754,6 +766,11 @@ span
     align-items: center;
     margin: 50px 0;
     z-index: 100;
+}
+
+#dateButton
+{
+    display: none;
 }
 
 .mainPage
@@ -1354,6 +1371,11 @@ button:hover
         z-index: 0;
     }
 
+    #hiddenArrow2
+    {
+        display: flex;
+    }
+
     .hiddenArrow button
     {
         position: relative;
@@ -1480,6 +1502,15 @@ button:hover
     {
         height: 350px;
         width: 300px;
+    }
+    #dateButton
+    {
+        display: inherit;
+        z-index: 10;
+    }
+    .hamburger i
+    {
+        color: white;
     }
     }
     
