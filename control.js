@@ -3,8 +3,16 @@ window.addEventListener("load", quitAnimation);
 
 function swiperRight()
 {
-    let leftPage = document.querySelector('leftPage');
-    leftPage.style.animationName = 'transformRight';
+    let slideUp = document.getElementById('leftPage');
+    slideUp.style.transform = 'translateX(250%)';
+    slideUp.style.animationName = 'slideUp';
+}
+
+function swiperDown()
+{
+    let slideUp = document.getElementById('leftPage');
+    slideUp.style.transform = 'translateX(0%)';
+    slideUp.style.animationName = 'slideDown';
 }
 
 function openPage(opener)

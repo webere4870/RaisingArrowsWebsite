@@ -132,6 +132,16 @@ iframe
     position: absolute;
     bottom: 0;
 }
+
+#topSVG
+{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-90deg);
+}
+
 .contactPage a
 {
     text-decoration: none;
@@ -257,7 +267,7 @@ textarea
 .leftPage
 {
     height: 100vh;
-    width: 40vw;
+    width: 30vw;
     background: var(--accent-color);
     position: relative;
     display: flex;
@@ -273,21 +283,29 @@ textarea
 
 }
 
+.leftPage .xButton
+{
+    display: none;
+}
+
 .hiddenArrow
 {
     position: absolute;
-    height: 100vh;
-    width: 20px;
-    display: flex;
+    width: 100vh;
+    height: 40px;
+    display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    left: 20px;
-    animation: dancingArrow;
+    /* animation: dancingArrow;
     animation-iteration-count: infinite;
     animation-duration: 2s;
     animation-delay: 8s;
-    animation-timing-function: ease-in-out;
-}
+    animation-timing-function: ease-in-out; */
+    bottom: 0;
+    left: 0px;
+    z-index: 100;
+} 
 
 .hiddenArrow:hover
 {
@@ -915,17 +933,8 @@ button:hover
 {
     content: url("./images/smallQuote2.png")
 } */
-@keyframes transformRight
-{
-    0%
-    {
 
-    }
-    100%
-    {
-        right: 90vw;
-    }
-}
+
 
 @keyframes dancingArrow
 {
@@ -935,23 +944,23 @@ button:hover
     }
     5%
     {
-        transform: translateX(45%);
+        transform: translateY(-45%);
     }
     15%
     {
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
     25%
     {
-        transform: translateX(45%);
+        transform: translateY(-45%);
     }
     35%
     {
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
     100%
     {
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
 }
 
@@ -1185,6 +1194,18 @@ button:hover
     }
   }
 
+  @media screen and (max-width: 1180px)
+  {
+    iframe
+    {
+        height: 350px;
+        width: 500px;
+    }
+    .leftPage
+    {
+
+    }
+  }
 
   @media screen and (max-width: 991px) {
     /* start of large tablet styles */
@@ -1229,15 +1250,99 @@ button:hover
         height: 350px;
         width: 500px;
     }
+    .fillFrame
+    {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+    .diamond3
+    {
+        height: 75px;
+        width: 75px;
+        position: absolute;
+        background: var(--accent-color);
+        top: -32px;
+        left: calc((100vw - 75px)/2);
+        transform: skew(0, -30deg);
+        background: white;
+
+    }
+    .diamond4
+    {
+        height: 75px;
+        width: 75px;
+        position: absolute;
+        background: var(--accent-color);
+        top: -32px;
+        right: calc((100vw - 75px)/2);
+        transform: skew(0, 30deg);
+        background: white;
+
+    }
+
+    .hiddenArrow
+    {
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: dancingArrow;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-delay: 8s;
+        animation-timing-function: ease-in-out;
+        bottom: 15px;
+    }
+
+
+
     .leftPage
     {
-       position: absolute;
-       left: -90vw;
-       width: 90vw;
-       animation-fill-mode: forwards;
-       animation-duration: 1s;
-       animation-timing-function: ease-out;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        transform: translateY(250%);
+        animation-name: none;
+        animation-fill-mode: forwards;
+        z-index: 150;
     }
+
+    .leftPage .xButton
+    {
+        display: flex;
+    }
+
+    @keyframes slideUp
+{
+    0%
+    {
+        transform: translateY(250%);
+    }
+    100%
+    {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideDown
+{
+    0%
+    {
+        transform: translateY(0%);
+    }
+    100%
+    {
+        transform: translateY(250%);
+    }
+}
+
     }
     
     @media screen and (max-width: 767px) {
