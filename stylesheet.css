@@ -825,7 +825,6 @@ span
     position: absolute;
     top: 15px;
     right: 15px;
-    width: 100vw;
     height: 100px;
     z-index: 5;
 }
@@ -1307,6 +1306,12 @@ button:hover
         width: 100vw;
         position: relative;
     }
+    .fillFrame button
+    {
+        background: white;
+        color: var(--accent-color);
+        border: 2px solid var(--accent-color);
+    }
     .diamond3
     {
         height: 75px;
@@ -1350,9 +1355,7 @@ button:hover
 
     .hiddenArrow button
     {
-        position: absolute;
-        bottom: 5px;
-        width: 200px;
+        position: relative;
         border: 2px solid white;
         background: white;
         color: var(--accent-color);
@@ -1484,7 +1487,7 @@ button:hover
     iframe
     {
         height: 450px;
-        width: 300px;
+        width: 95vw;
     }
     .iconRow
     {
