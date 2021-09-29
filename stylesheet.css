@@ -312,7 +312,7 @@ textarea
     bottom: 0px;
     left: 0px;
     z-index: 100;
-    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%, 0% 100%);
     background: var(--accent-color);
 } 
 
@@ -325,7 +325,7 @@ textarea
     display: none;
     transform: rotate(180deg);
     background: var(--accent-color);
-    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%, 0% 100%);
 }
 
 .hiddenArrow:hover
