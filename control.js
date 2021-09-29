@@ -6,6 +6,11 @@ function swiperRight()
     let slideUp = document.getElementById('leftPage');
     slideUp.style.transform = 'translateX(250%)';
     slideUp.style.animationName = 'slideUp';
+    let buttonClose = document.getElementById('dateButton');
+    setTimeout(1000, ()=>
+    {
+        buttonClose.style.display = 'none';
+    })
 }
 
 function swiperDown()
@@ -13,6 +18,8 @@ function swiperDown()
     let slideUp = document.getElementById('leftPage');
     slideUp.style.transform = 'translateX(0%)';
     slideUp.style.animationName = 'slideDown';
+    let buttonClose = document.getElementById('dateButton');
+    buttonClose.style.display = 'inherit';
 }
 
 function openPage(opener)
