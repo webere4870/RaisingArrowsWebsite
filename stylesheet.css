@@ -1401,7 +1401,7 @@ button:hover
         width: 100vw;
         height: 100vh;
         transform: translateY(250%);
-        animation-name: none;
+        animation-name: slideUp;
         animation-fill-mode: forwards;
         z-index: 150;
     }
