@@ -7,18 +7,23 @@ let phone = document.getElementById('phone');
 let message = document.getElementById('message');
 form.addEventListener("submit", (event)=>
 {
-    let acceptName = isNameValid();
-    let acceptEmail = isEmailValid();
-    let acceptPhone = isPhoneValid();
-    let acceptMessage = isMessageValid();
-    if(acceptName === false || acceptEmail === false || acceptPhone === false || acceptMessage ===false)
+    let acceptName = isNameValid(event);
+    let acceptEmail = isEmailValid(event);
+    let acceptPhone = isPhoneValid(event);
+    let acceptMessage = isMessageValid(event);
+    if(acceptName === true && acceptEmail === true && acceptPhone === true && acceptMessage ===true)
     {
-        event.preventDefault();
+        
+    }
+    else
+    {
+        alert("Arrived");
+        return false;
     }
     
 })
 
-function isNameValid()
+function isNameValid(event)
 {
     let str = document.getElementById('name').value;
     let trueOrFalse = true;
@@ -30,13 +35,14 @@ function isNameValid()
             {
                 trueOrFalse = false;
                 alert("Invalid name.");
+                event.preventDefault();
             }
         }
     }
     return trueOrFalse;
 }
 
-function isEmailValid()
+function isEmailValid(event)
 {
     let str = document.getElementById('email').value;
     let trueOrFalse = true;
@@ -48,39 +54,54 @@ function isEmailValid()
             {
                 trueOrFalse = false;
                 alert("Invalid email.");
+                event.preventDefault();
             }
         }
     }
     return trueOrFalse;
 }
 
-function isPhoneValid()
+function isPhoneValid(event)
 {
     let str = document.getElementById('phone').value;
     let trueOrFalse = true;
     for(let counter = 0; counter < str.length; counter++)
     {
 
-            if(!Number.isInteger(str[counter]) && str[counter] !== '-' && str[counter] !== '+')
+            if(str[counter] !== '-' && str[counter] !== '+')
             {
-                trueOrFalse = false;
-                alert('Invalid phone');
+                if(Number.isInteger(parseInt(str[counter]) === false))
+                {
+                    trueOrFalse = false;
+                    alert('Invalid phone');
+                    event.preventDefault();
+                }
+                if((/[a-zA-Z]/).test(str[counter]))
+                {
+                    trueOrFalse = false;
+                    alert('Invalid phone');
+                    event.preventDefault();
+                }
+                
             }
 
     }
     return trueOrFalse;
 }
 
-function isMessageValid()
+function isMessageValid(event)
 {
     let str = document.getElementById('message').value;
     let trueOrFalse = true;
+    alert("Here");
+    setTimeout(2000, ()=>{});
     for(let counter = 0; counter < str.length; counter++)
     {
-        if(!(/[a-zA-Z]/).test(str[counter]) && !Number.isInteger(str[counter]))
+        if((/[a-zA-Z]/).test(str[counter]) === false && str[counter] !== ' ')
         {
             trueOrFalse = false;
             alert("Invalid message. Alphanumerics only.");
+            event.preventDefault();
         }
     }
     return trueOrFalse;
