@@ -1,5 +1,90 @@
 window.addEventListener("load", quitAnimation);
 
+let form = document.getElementById('form');
+let name = document.getElementById('name');
+let email = document.getElementById('email');
+let phone = document.getElementById('phone');
+let message = document.getElementById('message');
+form.addEventListener("submit", (event)=>
+{
+    let acceptName = isNameValid();
+    let acceptEmail = isEmailValid();
+    let acceptPhone = isPhoneValid();
+    let acceptMessage = isMessageValid();
+    if(acceptName === false || acceptEmail === false || acceptPhone === false || acceptMessage ===false)
+    {
+        event.preventDefault();
+    }
+    
+})
+
+function isNameValid()
+{
+    let str = document.getElementById('name').value;
+    let trueOrFalse = true;
+    for(let counter = 0; counter < str.length; counter++)
+    {
+        if(!(/[a-zA-Z]/).test(str[counter]))
+        {
+            if(str[counter] !== ' ')
+            {
+                trueOrFalse = false;
+                alert("Invalid name.");
+            }
+        }
+    }
+    return trueOrFalse;
+}
+
+function isEmailValid()
+{
+    let str = document.getElementById('email').value;
+    let trueOrFalse = true;
+    for(let counter = 0; counter < str.length; counter++)
+    {
+        if(!(/[a-zA-Z]/).test(str[counter]))
+        {
+            if(str[counter] !== '@' && str[counter] !== '.' && Number.isInteger(str[counter]))
+            {
+                trueOrFalse = false;
+                alert("Invalid email.");
+            }
+        }
+    }
+    return trueOrFalse;
+}
+
+function isPhoneValid()
+{
+    let str = document.getElementById('phone').value;
+    let trueOrFalse = true;
+    for(let counter = 0; counter < str.length; counter++)
+    {
+
+            if(!Number.isInteger(str[counter]) && str[counter] !== '-' && str[counter] !== '+')
+            {
+                trueOrFalse = false;
+                alert('Invalid phone');
+            }
+
+    }
+    return trueOrFalse;
+}
+
+function isMessageValid()
+{
+    let str = document.getElementById('message').value;
+    let trueOrFalse = true;
+    for(let counter = 0; counter < str.length; counter++)
+    {
+        if(!(/[a-zA-Z]/).test(str[counter]) && !Number.isInteger(str[counter]))
+        {
+            trueOrFalse = false;
+            alert("Invalid message. Alphanumerics only.");
+        }
+    }
+    return trueOrFalse;
+}
 
 function swiperRight()
 {

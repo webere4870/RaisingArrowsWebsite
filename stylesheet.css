@@ -193,6 +193,12 @@ form > *
     margin: 5px 0;
 }
 
+input:valid
+{
+    border: 1px solid greenyellow;
+}
+
+
 input
 {
     background: #03213f;
