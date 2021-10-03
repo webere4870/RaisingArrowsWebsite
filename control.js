@@ -13,7 +13,7 @@ form.addEventListener("submit", (event)=>
     let acceptMessage = isMessageValid(event);
     if(acceptName === true && acceptEmail === true && acceptPhone === true && acceptMessage ===true)
     {
-        
+        alert("Thank you for your submission!");
     }
     else
     {

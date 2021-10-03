@@ -186,11 +186,29 @@ h2
 form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form > *
 {
     margin: 5px 0;
+}
+
+#cButton
+{
+    width: 100px;
+    text-align: center;
+    background: #03213f;
+    border: 1px solid gray;
+    color: white;
+    font-weight: lighter;
+    transform: translateX(800%);
+    animation-name: slideLeft2;
+    animation-duration: .75s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: .55s;
 }
 
 input:valid
@@ -233,6 +251,11 @@ input:nth-of-type(3)
 textarea
 {
     animation-delay: .40s;
+}
+
+#cButton
+{
+    animation-delay: .55s;
 }
 
 
@@ -1076,6 +1099,18 @@ button:hover
     0%
     {
         transform: translateX(400%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideLeft2
+{
+    0%
+    {
+        transform: translateX(800%);
     }
     100%
     {
