@@ -7,9 +7,12 @@
     <title>Document</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Bad+Script&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Bad+Script&family=Montserrat:wght@200&display=swap" rel="stylesheet">
 <style>
     .navigationBar a
     {
@@ -27,8 +30,13 @@
         overflow-y: hidden;
         overflow-x: hidden;
     }
-
 </style>
+<style>
+    #mapid { height: 360px; width: 500px; z-index: 100;}
+</style>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -48,23 +56,24 @@
     </div>
 
     <div class="contactPage">
-
+        
         <!-- <div class="leftScreen">
             <div id="map"></div>
             
         </div> -->
         <div class="rightScreen">
-            <h1>Contact us or send us a message! <br>
-            <i class="fas fa-inbox" style="font-size: 20px;"></i><a href="mailto:raisingarrowsfindlay@gmail.com
-            " style="font-size: 20px;">raisingarrowsfindlay@gmail.com
-        </a> <br><i style="font-size: 20px;" class="fas fa-phone-volume"></i><a href="tel:419-348-1978" style="font-size: 20px;">419-348-1978</a> <br></h1>
             <form method="POST" action="form.php" id="form">
+                <h1>Contact us or send us a message! <br>
+                    <i class="fas fa-inbox" style="font-size: 20px;"></i><a href="mailto:raisingarrowsfindlay@gmail.com
+                    " style="font-size: 20px;">raisingarrowsfindlay@gmail.com
+                </a> <br><i style="font-size: 20px;" class="fas fa-phone-volume"></i><a href="tel:419-348-1978" style="font-size: 20px;">419-348-1978</a> <br></h1>
                 <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name">
                 <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
                 <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
                 <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
                 <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
             </form>
+            <div id="mapid"></div>
         </div>
 
             <div class="hamburgerNavigation">
@@ -97,15 +106,10 @@
     
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzaKppWvSgYAsc-G9Jy9MkwZl4Sk24nM8&callback=initMap&v=weekly"
-      async
-    >
 
 </script>
-    
-    <script src="control.js">
+<script src="control.js">
 
-    </script>
+</script>
 </body>
 </html>
