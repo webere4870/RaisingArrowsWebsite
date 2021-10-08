@@ -204,7 +204,7 @@ form > *
     border: 1px solid gray;
     color: white;
     font-weight: lighter;
-    transform: translateX(800%);
+    transform: translateX(-800%);
     animation-name: slideLeft2;
     animation-duration: .75s;
     animation-timing-function: ease;
@@ -1095,7 +1095,7 @@ button:hover
 {
     0%
     {
-        transform: translateX(400%);
+        transform: translateX(-400%);
     }
     100%
     {
@@ -1107,7 +1107,7 @@ button:hover
 {
     0%
     {
-        transform: translateX(800%);
+        transform: translateX(-800%);
     }
     100%
     {
