@@ -1477,6 +1477,9 @@ button:hover
     
     @media screen and (max-width: 767px) {
     /* start of medium tablet styles */
+    #mapid{
+        display: none;
+    }
     .leftScreen
     {
         display: none;
