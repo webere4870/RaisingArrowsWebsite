@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Document</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="stylesheet.css">
@@ -30,20 +31,31 @@
         overflow-y: hidden;
         overflow-x: hidden;
     }
+
 </style>
 <style>
-    #mapid { display: none; height: 100vh; width: 100vw; z-index: 100;}
-    @media  screen and (max-width:767px) {
-        #mapid
-        {
-            position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+    #mapid {height: 100vh; width: 100vw; z-index: 100; z-index: -1000; position: absolute; top: 0; left: 0;}
+    #mapClose
+    {
         display: none;
-        z-index: 15000;
-        }
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 30px;
+        z-index: 3000;
+    }
+    #mapWrapper
+    {
+        /* display: none;
+        height: 400px;
+        width: 600px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100000; */
+    }
+    @media  screen and (max-width:767px) {
+        
     }
 </style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -53,7 +65,9 @@ crossorigin=""></script>
 </head>
 <body>
     <i class="fa fa-map-marker" aria-hidden="true" onclick="displayMap()"></i>
-    <div id="mapid"></div>
+    <div id="mapWrapper">
+        <div id="mapid"></div>
+    </div>
     <div class="xButton" id="mapClose" onclick="closeMap()">
         <i class="fas fa-times"></i>
     </div>
@@ -89,7 +103,7 @@ crossorigin=""></script>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
                 <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
             </form>
-            
+           
         </div>
 
             <div class="hamburgerNavigation">
@@ -123,6 +137,15 @@ crossorigin=""></script>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 
+</script>
+<script>
+    
+    window.addEventListener('resize', function(event){
+    let newWidth = window.innerWidth;
+    let newHeight = window.innerHeight; });
+    let resizeEvent = window.document.createEvent('UIEvents'); 
+    resizeEvent.initUIEvent('resize', true, false, window, 0); 
+    window.dispatchEvent(resizeEvent);
 </script>
 <script src="control.js">
 

@@ -182,6 +182,7 @@ h2
     text-align: center;
     flex-direction: row;
     width: 100vw;
+    height: 100vh;
 }
 
 form{
@@ -1503,22 +1504,20 @@ button:hover
     
     @media screen and (max-width: 767px) {
     /* start of medium tablet styles */
-    #mapClose{
-        display: none;
-    }
+
     .fa-map-marker
     {
         display: block;
         
     }
     #mapid{
-        position: absolute;
+        /* position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
         display: none;
-        z-index: 15000;
+        z-index: 15000; */
     }
     .leftScreen
     {

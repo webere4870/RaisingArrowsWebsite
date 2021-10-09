@@ -1,4 +1,14 @@
 window.addEventListener("load", quitAnimation);
+window.addEventListener("resize", ()=>
+{
+
+});
+
+setInterval(()=>
+{
+    $(window).trigger('resize');
+},100);
+
 
 let latitude = 41.0355953;
 let longitude = -83.646441;
@@ -9,14 +19,20 @@ const tiles = L.tileLayer(tileURL, {attribution});
 tiles.addTo(mymap);
 var marker = L.marker([latitude, longitude]).addTo(mymap);
 marker.bindPopup("Central Church of Christ<br>307 E Hardin St, Findlay, OH 45840<br>");
-
+mymap.invalidateSize();
 
 function displayMap()
 {
     let map = document.getElementById("mapid");
-    map.style.display = "flex";
+    map.style.zIndex = "1000";
     let xButton = document.getElementById("mapClose");
     xButton.style.display = "block";
+    
+}
+
+function resizeMap()
+{
+    
 }
 
 function closeMap()
