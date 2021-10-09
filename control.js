@@ -30,15 +30,14 @@ function displayMap()
     
 }
 
-function resizeMap()
-{
-    
-}
-
 function closeMap()
 {
-
+    let map = document.getElementById("mapid");
+    map.style.zIndex = "-10000";
+    let xButton = document.getElementById("mapClose");
+    xButton.style.display = "none";
 }
+
 
 let form = document.getElementById('form');
 let name = document.getElementById('name');
