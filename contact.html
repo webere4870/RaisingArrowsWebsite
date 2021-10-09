@@ -32,7 +32,19 @@
     }
 </style>
 <style>
-    #mapid { height: 360px; width: 500px; z-index: 100;}
+    #mapid { display: none; height: 100vh; width: 100vw; z-index: 100;}
+    @media  screen and (max-width:767px) {
+        #mapid
+        {
+            position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        z-index: 15000;
+        }
+    }
 </style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -40,7 +52,11 @@ crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <i class="fa fa-map-marker" aria-hidden="true" onclick="displayMap()"></i>
+    <div id="mapid"></div>
+    <div class="xButton" id="mapClose" onclick="closeMap()">
+        <i class="fas fa-times"></i>
+    </div>
     <div class="backgroundControl">
 
     </div>
@@ -73,7 +89,7 @@ crossorigin=""></script>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
                 <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
             </form>
-            <div id="mapid"></div>
+            
         </div>
 
             <div class="hamburgerNavigation">
