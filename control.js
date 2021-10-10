@@ -4,10 +4,26 @@ window.addEventListener("resize", ()=>
 
 });
 
+
+
+
+for(let counter = 0; counter < document.querySelectorAll('.social').length; counter++)
+{
+    document.querySelectorAll('.social')[counter].addEventListener("click", ()=>
+    {
+        alert("Social media pages not created yet!");
+    })
+}
+
+
+
+
 setInterval(()=>
 {
     $(window).trigger('resize');
 },100);
+
+
 
 
 let latitude = 41.0355953;
@@ -21,6 +37,9 @@ var marker = L.marker([latitude, longitude]).addTo(mymap);
 marker.bindPopup("Central Church of Christ<br>307 E Hardin St, Findlay, OH 45840<br>");
 mymap.invalidateSize();
 
+
+
+
 function displayMap()
 {
     let map = document.getElementById("mapid");
@@ -30,6 +49,9 @@ function displayMap()
     
 }
 
+
+
+
 function closeMap()
 {
     let map = document.getElementById("mapid");
@@ -37,6 +59,9 @@ function closeMap()
     let xButton = document.getElementById("mapClose");
     xButton.style.display = "none";
 }
+
+
+
 
 
 let form = document.getElementById('form');
@@ -62,6 +87,8 @@ form.addEventListener("submit", (event)=>
     
 })
 
+
+
 function isNameValid(event)
 {
     let str = document.getElementById('name').value;
@@ -81,6 +108,9 @@ function isNameValid(event)
     return trueOrFalse;
 }
 
+
+
+
 function isEmailValid(event)
 {
     let str = document.getElementById('email').value;
@@ -99,6 +129,9 @@ function isEmailValid(event)
     }
     return trueOrFalse;
 }
+
+
+
 
 function isPhoneValid(event)
 {
@@ -128,6 +161,9 @@ function isPhoneValid(event)
     return trueOrFalse;
 }
 
+
+
+
 function isMessageValid(event)
 {
     let str = document.getElementById('message').value;
@@ -146,6 +182,9 @@ function isMessageValid(event)
     return trueOrFalse;
 }
 
+
+
+
 function swiperRight()
 {
     let slideUp = document.getElementById('leftPage');
@@ -157,6 +196,9 @@ function swiperRight()
 
 }
 
+
+
+
 function swiperDown()
 {
     let slideUp = document.getElementById('leftPage');
@@ -165,6 +207,9 @@ function swiperDown()
     let buttonClose = document.getElementById('dateButton');
     buttonClose.style.display = 'inherit';
 }
+
+
+
 
 function openPage(opener)
 {
@@ -177,6 +222,9 @@ function openPage(opener)
     }
 }
 
+
+
+
 function closePage(closer)
 {
     let myPage = document.getElementsByClassName(closer);
@@ -188,11 +236,17 @@ function closePage(closer)
     }
 }
 
+
+
+
 function quitAnimation()
 {
     let closer = document.getElementsByClassName("animationPage");
     closer[0].style.display = "none";
 }
+
+
+
 
 function updateSlide(slideNumber)
 {
@@ -204,6 +258,9 @@ function updateSlide(slideNumber)
     let mySlide = document.querySelector(slideNumber);
     mySlide.style.display = 'flex';
 }
+
+
+
 
 function openClose(idOpen, classClose, animationNumber)
 {
@@ -238,7 +295,12 @@ function openClose(idOpen, classClose, animationNumber)
 
 }
 
+
+
 let map;
+
+
+
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {

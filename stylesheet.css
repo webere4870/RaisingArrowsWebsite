@@ -1010,6 +1010,7 @@ h1
     color: var(--accent-color);
     background: rgba(0,0,0,0);
     border: 2px solid var(--accent-color);
+    z-index: 5;
 }
 
 #darkButton
@@ -1017,6 +1018,21 @@ h1
     color: white;
     background: var(--accent-color);
     border: none;
+    z-index: 50;
+}
+
+#darkButton:hover
+{
+    cursor: pointer;
+}
+
+.buttonClass
+{
+    z-index: -1;
+}
+
+.buttonClass a:hover{
+    cursor: pointer;
 }
 
 button

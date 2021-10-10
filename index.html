@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Bad+Script&family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -16,6 +33,11 @@
         overflow-y: hidden;
         overflow-x: hidden;
     }
+    
+.buttonClass
+{
+    z-index: 5;
+}
 </style>
 </head>
 <body>
@@ -56,18 +78,19 @@
             <h1>Raising Arrows</h1>
             <h1 style="font-size: 40px;">Findlay, OH   <i class="fas fa-map-marker-alt"></i></h1>
             <div class="buttonClass">
-                <a href="mission.html"><button id="lightButton">Our Mission</button></a>
-                <a href="contact.html"><button id="darkButton">Contact</button></a>
+                <button id="lightButton" onclick="window.location.href='mission.html'">Our Mission</button>
+                <button id="darkButton"  onclick="window.location.href='contact.html'">Contact</button>
             </div>
+            
             <h2 class="homePageh2">Children are a heritage from the Lord,
                 offspring a reward from him.
             Like arrows in the hands of a warrior
                 are children born in one’s youth.
             <br> Psalm 127:3-4</h2>
             <div class="iconRow">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-youtube-square"></i>
-                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-square social"></i>
+                <i class="fab fa-youtube-square social"></i>
+                <i class="fab fa-instagram social"></i>
             </div>
         </div>
 
