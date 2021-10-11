@@ -1,3 +1,4 @@
+// Turn off page loader, render Leaflet.js library
 window.addEventListener("load", quitAnimation);
 window.addEventListener("resize", ()=>
 {
@@ -7,6 +8,7 @@ window.addEventListener("resize", ()=>
 
 
 
+// CHANGE WHEN SOCIAL MEDIA PAGES ADDED
 for(let counter = 0; counter < document.querySelectorAll('.social').length; counter++)
 {
     document.querySelectorAll('.social')[counter].addEventListener("click", ()=>
@@ -18,6 +20,7 @@ for(let counter = 0; counter < document.querySelectorAll('.social').length; coun
 
 
 
+// Leaflet.js map resize tiles
 setInterval(()=>
 {
     $(window).trigger('resize');
@@ -26,6 +29,7 @@ setInterval(()=>
 
 
 
+// Leaflet.js map initialization and display
 let latitude = 41.0355953;
 let longitude = -83.646441;
 let mymap = L.map('mapid').setView([latitude, longitude], 13);
@@ -40,6 +44,7 @@ mymap.invalidateSize();
 
 
 
+// Display the map and button
 function displayMap()
 {
     let map = document.getElementById("mapid");
@@ -51,7 +56,7 @@ function displayMap()
 
 
 
-
+// Close the map
 function closeMap()
 {
     let map = document.getElementById("mapid");
@@ -63,18 +68,29 @@ function closeMap()
 
 
 
-
+// Contact form validation objects
 let form = document.getElementById('form');
 let name = document.getElementById('name');
 let email = document.getElementById('email');
 let phone = document.getElementById('phone');
 let message = document.getElementById('message');
+
+
+
+
+// Executes prior to PHP execution
 form.addEventListener("submit", (event)=>
 {
+
+    // Check if input is valid
     let acceptName = isNameValid(event);
     let acceptEmail = isEmailValid(event);
     let acceptPhone = isPhoneValid(event);
     let acceptMessage = isMessageValid(event);
+
+
+    // If the form is valid, allow PHP to execute
+    // Else cancel submission with return false
     if(acceptName === true && acceptEmail === true && acceptPhone === true && acceptMessage ===true)
     {
         alert("Thank you for your submission!");
@@ -89,6 +105,8 @@ form.addEventListener("submit", (event)=>
 
 
 
+
+// Validates name, checks for SQL injections
 function isNameValid(event)
 {
     let str = document.getElementById('name').value;
@@ -111,6 +129,7 @@ function isNameValid(event)
 
 
 
+// Validates email, only allows certain characters
 function isEmailValid(event)
 {
     let str = document.getElementById('email').value;
@@ -133,6 +152,7 @@ function isEmailValid(event)
 
 
 
+// Validates phone, only allows numbers dashes or addition sign
 function isPhoneValid(event)
 {
     let str = document.getElementById('phone').value;
@@ -164,6 +184,7 @@ function isPhoneValid(event)
 
 
 
+// Validates message, looks for cross site scripting and SQL injections
 function isMessageValid(event)
 {
     let str = document.getElementById('message').value;
@@ -185,6 +206,7 @@ function isMessageValid(event)
 
 
 
+// Calendar page animation
 function swiperRight()
 {
     let slideUp = document.getElementById('leftPage');
@@ -199,6 +221,7 @@ function swiperRight()
 
 
 
+// Calendar page, informational animation
 function swiperDown()
 {
     let slideUp = document.getElementById('leftPage');
@@ -211,6 +234,7 @@ function swiperDown()
 
 
 
+// Function factory for any kind of opening event
 function openPage(opener)
 {
     let myPage = document.getElementsByClassName(opener);
@@ -225,6 +249,7 @@ function openPage(opener)
 
 
 
+// General closing factory function
 function closePage(closer)
 {
     let myPage = document.getElementsByClassName(closer);
@@ -239,6 +264,7 @@ function closePage(closer)
 
 
 
+// Halts animation on all pages
 function quitAnimation()
 {
     let closer = document.getElementsByClassName("animationPage");
@@ -247,7 +273,7 @@ function quitAnimation()
 
 
 
-
+// Slide show control
 function updateSlide(slideNumber)
 {
     let slideShow = document.querySelectorAll('.content');
@@ -262,23 +288,38 @@ function updateSlide(slideNumber)
 
 
 
+// Slide show controls
 function openClose(idOpen, classClose, animationNumber)
 {
+    // Which slide show to control
     let myId = document.querySelector(idOpen);
     let closeClass = document.getElementsByClassName('controlDisplay');
     let animation = document.querySelectorAll('.innerPage');
+
+
+
+    // Initiate animation for all class objects
     for(let counter = 0; counter < animation.length; counter++)
     {
         animation[counter].style.animationName = `${animationNumber}`;
     }
+
+
     let counterSelect =0;
     for(let counter = 0; counter < closeClass.length; counter++)
     {
         closeClass[counter].style.display = "none";
     }
+
+
+    // Control display information
     myId.style.display = "flex";
     let yesOrNo = document.querySelectorAll('.controlDisplay');
     let circle = document.querySelectorAll('.circleSS');
+
+
+
+    // Determine if slide has values, else change background
     for(let counter = 0; counter < closeClass.length; counter++)
     {
         if(yesOrNo[counter].style.display !== 'none')
@@ -301,7 +342,7 @@ let map;
 
 
 
-
+// Google map API...Still undecided between this and Leaflet.js
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -41.03570179880634, lng: 83.64643271631078 },
