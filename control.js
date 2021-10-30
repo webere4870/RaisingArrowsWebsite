@@ -324,7 +324,7 @@ function openClose(idOpen, classClose, animationNumber)
     {
         if(yesOrNo[counter].style.display !== 'none')
         {
-            circle[counter].style.background = 'white';
+            circle[counter].style.background = '#05386b';
         }
         else
         {
