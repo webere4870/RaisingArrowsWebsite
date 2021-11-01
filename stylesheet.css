@@ -82,6 +82,137 @@ iframe
     animation-timing-function: ease-in;
 }
 
+#aboutUs
+{
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(207, 207, 207);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutCard
+{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 16px;
+    position: relative;
+    perspective: 1000px;
+    transition: all 1.5s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+}
+
+.frontCard
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    perspective: 1000px;
+    transition: all 1.5s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+}
+
+.backCard
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--accent-color);
+    border-radius: 16px;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    transition: all 1.5s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+
+
+#wrapper:hover .aboutCard
+{
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+
+
+
+
+.aboutSub
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+.aboutCard h1
+{
+    font-size: 45px;
+    color: var(--accent-color2);
+    font-weight: bolder;
+    position: relative;
+    margin-top: 10px;
+}
+
+.aboutCard h1:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0; /*this centers it based on the above width*/
+    border-bottom: 3px solid var(--accent-color);
+  }
+
+  .aboutCard h1:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0; /*this centers it based on the above width*/
+    border-bottom: 3px solid var(--accent-color);
+  }
+
+.aboutCard:hover
+{
+    box-shadow: 5px 5px 5px 5px gray;
+    cursor: pointer;
+}
+
+.aboutImage
+{
+    width: 100%;
+    height: 60%;
+}
+
+#about1
+{
+    background: url("./images/teamwork.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .secondPage
 {
     background-position: center;
