@@ -7,6 +7,19 @@ window.addEventListener("resize", ()=>
 
 
 
+function flipCard(cardID)
+{
+    
+    
+    let width = window.innerWidth;
+    if(width < 991)
+    {
+        let myCard = document.getElementById(cardID);
+        // myCard.style.transform = "rotateY(180deg)";
+        myCard.style.animationName = "cardFlipBack";
+    }
+}
+
 
 // CHANGE WHEN SOCIAL MEDIA PAGES ADDED
 for(let counter = 0; counter < document.querySelectorAll('.social').length; counter++)
@@ -21,10 +34,7 @@ for(let counter = 0; counter < document.querySelectorAll('.social').length; coun
 
 
 // Leaflet.js map resize tiles
-setInterval(()=>
-{
-    $(window).trigger('resize');
-},100);
+
 
 
 
