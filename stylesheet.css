@@ -88,8 +88,15 @@ iframe
     min-height: 100vh;
     background: rgb(207, 207, 207);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.wrapper
+{
+    margin: 15px 50px;
 }
 
 .aboutCard
@@ -99,6 +106,7 @@ iframe
     background-color: white;
     padding: 15px;
     border-radius: 16px;
+    box-shadow: 5px 5px 5px gray;
     position: relative;
     perspective: 1000px;
     transition: all 1.5s;
@@ -130,10 +138,13 @@ iframe
 {
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--accent-color);
+    background: var(--main-color);
     border-radius: 16px;
     backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -148,13 +159,68 @@ iframe
 
 
 
-#wrapper:hover .aboutCard
+
+
+.softBox
+{
+    color: white;
+    height: 80%;
+    width: 80%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid white;
+    padding: 0 5px;
+}
+
+.softBox p
+{
+    font-family: 'Advent Pro', sans-serif;;
+}
+
+#wrapper1:hover #aboutCard1
 {
     transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
 }
 
+#wrapper2:hover #aboutCard2
+{
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
 
+#wrapper3:hover #aboutCard3
+{
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+
+#wrapper4:hover #aboutCard4
+{
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+
+#wrapper5:hover #aboutCard5
+{
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+
+#wrapper6:hover #aboutCard6
+{
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+
+.fullWidth
+{
+    width: 100vw;
+    text-align: center;
+}
 
 
 .aboutSub
@@ -208,6 +274,45 @@ iframe
 #about1
 {
     background: url("./images/teamwork.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about2
+{
+    background: url("./images/friends.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about3
+{
+    background: url("./images/classroom.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about4
+{
+    background: url("./images/handsOn.HEIC");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about5
+{
+    background: url("./images/lifeSkills.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#about6
+{
+    background: url("./images/age.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
