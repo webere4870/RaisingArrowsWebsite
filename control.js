@@ -7,7 +7,7 @@ window.addEventListener("resize", ()=>
 
 
 
-function flipCard(cardID)
+function flipCard(cardID, index)
 {
     
     
@@ -17,6 +17,10 @@ function flipCard(cardID)
         let myCard = document.getElementById(cardID);
         // myCard.style.transform = "rotateY(180deg)";
         myCard.style.animationName = "cardFlipBack";
+        setTimeout(()=>
+        {
+            document.querySelectorAll('.backCard')[index].style.zIndex = "-50";
+        }, 1500);
     }
 }
 
