@@ -114,6 +114,7 @@ iframe
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
+
     animation-timing-function: ease;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
@@ -136,6 +137,10 @@ iframe
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .backCard
@@ -159,6 +164,9 @@ iframe
     -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 
@@ -188,36 +196,48 @@ iframe
 {
     transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 #wrapper2:hover #aboutCard2
 {
     transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 #wrapper3:hover #aboutCard3
 {
     transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 #wrapper4:hover #aboutCard4
 {
     transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 #wrapper5:hover #aboutCard5
 {
     transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 #wrapper6:hover #aboutCard6
 {
     transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 .fullWidth
@@ -1610,8 +1630,10 @@ button:hover
         
       }
       100%{
-          transform: rotateY(180deg);
-          -ms-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
       }
   }
 
@@ -1631,32 +1653,44 @@ button:hover
     #wrapper1:hover #aboutCard1
     {
         transform: rotateY(0deg);
-        -ms-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     }
     #wrapper2:hover #aboutCard2
     {
         transform: rotateY(0deg);
-        -ms-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     }
     #wrapper3:hover #aboutCard3
     {
         transform: rotateY(0deg);
-        -ms-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     }
     #wrapper4:hover #aboutCard4
     {
         transform: rotateY(0deg);
-        -ms-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     }
     #wrapper5:hover #aboutCard5
     {
         transform: rotateY(0deg);
         -ms-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
     }
     #wrapper6:hover #aboutCard6
     {
         transform: rotateY(0deg);
-        -ms-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     }
     .navigationBar
     {
