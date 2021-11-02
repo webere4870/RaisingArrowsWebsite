@@ -17,10 +17,6 @@ function flipCard(cardID, index)
         let myCard = document.getElementById(cardID);
         // myCard.style.transform = "rotateY(180deg)";
         myCard.style.animationName = "cardFlipBack";
-        setTimeout(()=>
-        {
-            document.querySelectorAll('.backCard')[index].style.zIndex = "-50";
-        }, 1500);
     }
 }
 
