@@ -14,15 +14,14 @@ function flipCard(cardID, index)
     let width = window.innerWidth;
     if(width < 991)
     {
-        let myCard = document.getElementById(cardID);
+        let myCard = document.querySelectorAll('.frontCard');
         // myCard.style.transform = "rotateY(180deg)";
-        myCard.style.animationName = "cardFlipBack";
-        
+        myCard[index].style.animationName = "cardFlipBack";
         setTimeout(()=>
         {
-            let cardBack = document.getElementsByClassName('backCard');
-            cardBack[index].style.zIndex = '50';
-        }, 1500)
+            myCard[index].style.animationName = "cardFlipFront";
+        },10000)
+        
     }
 }
 

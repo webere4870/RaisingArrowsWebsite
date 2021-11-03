@@ -97,7 +97,7 @@ iframe
 .wrapper
 {
     margin: 15px 50px;
-
+    z-index: 5;
 }
 
 .aboutCard
@@ -141,6 +141,10 @@ iframe
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     perspective: 1000px;
+    background: white;
+    animation-timing-function: ease;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .backCard
@@ -1630,10 +1634,7 @@ button:hover
         
       }
       100%{
-        transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        -webkit-transform: rotateY(180deg);
+        opacity: 0;
       }
   }
 
@@ -1641,10 +1642,10 @@ button:hover
   {
       0%
       {
-
+        opacity: 0;
       }
       100%{
-          transform: rotateY(inherit);
+          opacity: 1;
       }
   }
 
@@ -1691,6 +1692,20 @@ button:hover
     -ms-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
+    }
+
+    .frontCard
+    {
+        z-index: 3;
+    }
+    .backCard
+    {
+        z-index: 2;
+        transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+
     }
     .navigationBar
     {
